@@ -19,3 +19,4 @@ output = xgb.dask.train(
     num_boost_round=4,
     evals=[(dtrain, "train")],
 )
+output["booster"].save_model("model_xgb.json")
